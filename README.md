@@ -1,28 +1,49 @@
-# Project Title
+# HW #4.3 — First Data Analysis QMD
 
-Write a 1-2 sentences that quickly and clearly convey what your repo is for.
+Repo for STAT 184 HW #4.3. Everything for the assignment is built from a single Quarto document that renders to PDF.
 
-## Overview
+## Overall
+Three separate mini-analyses, all written up in one `.qmd` file:
 
-Expand on those introductory sentences with a brief but informative description of your project's purpose and goals. This section should help visitors decide whether they should dig deeper into your repo/project.
+1. **Busiest Airports (2020–2025)** — annual passenger traffic at ATL, FRA, PKX, DXB, LAX, and LHR, pulled into a table and a line chart to look at how air travel recovered after COVID.
+2. **Monte Carlo Numerical Integration** — estimating the area under the Chi-squared PDF (df = 5) by random sampling at n = 10, 100, 1,000, and 10,000 points.
+3. **GenAI Prompting Comparison** — tidying the `calcium.csv` data, writing a plan-informed prompt for Claude Sonnet 4.6, and comparing its output against the generic prompt output the instructor provided.
 
-### Interesting Insight (Optional)
+## Where the data came from
 
-This is optional but highly recommended. You'll include one interesting insight from your project as part of the README. This insight is most effective when you include a visual. Keep in mind that this visual must be included as an image file (e.g., JPG, PNG, etc.). You can export plots created with `{ggplot2}` by using the function `ggsave`.
+- Airport passenger numbers: public airport statistics and Wikipedia (in millions).
+- `calcium.csv`: provided by the instructor. Two treatment groups (Null Treatment, 15 women; Diet/Exercise, 16 women) measured at Year 0 through Year 3.
+- Generic prompt PNGs (`generic_group_means.png`, `generic_individual_lines.png`): provided by the instructor, used only for comparison in Section 3.
 
-## Data Sources and Acknowledgements
+## Current plan
 
-Be sure to list where you got any data used within the project. Be sure to acknowledge any one whose work or elements you're drawing upon.
+Full plan is in `PLAN.md`. Short version: finish the QMD, render it to PDF, keep the repo clean with branches and issues, push everything before the deadline.
 
-## Current Plan
+## How the repo is organized
 
-Provide some information about what you intend to doe with the project. You can additionally refer the visitor to your detailed plan document.
+```
+.
+├── README.md                     # this file
+├── PLAN.md                       # project + repo plan
+├── hw4.3JunboZhaoV6.qmd          # main Quarto source
+├── hw4.3JunboZhaoV6.pdf          # rendered output
+├── calcium.csv                   # tidied-from data for Section 3
+├── generic_group_means.png       # instructor-provided comparison image
+└── generic_individual_lines.png  # instructor-provided comparison image
+```
 
-## Repo Structure
+Branches:
+- `main` — graded version, only updated through pull requests.
+- `dev` — where new work actually happens before it gets merged.
 
-Use this section to explain the structure of your repo. This should help visitors quickly figure out where they should look to find certain elements. Further, you can use this space to highlight and briefly explain important/key files in the repo.
+## How to reproduce
 
+1. Clone the repo.
+2. Open `hw4.3JunboZhaoV6.qmd` in RStudio.
+3. Make sure `tidyverse`, `knitr`, and `kableExtra` are installed.
+4. Click Render (or run `quarto render hw4.3JunboZhaoV6.qmd`). The PDF should build without edits as long as `calcium.csv` and the two PNGs are sitting next to the QMD.
 
-## Authors
+## Contact
 
-Give information about who are the authors of the project and how people can get in touch if they have questions.
+Junbo Zhao
+Email: nmsl24371@gmail.com/jzz5658@psu.edu
