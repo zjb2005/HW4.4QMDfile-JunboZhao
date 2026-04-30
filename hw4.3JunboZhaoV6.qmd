@@ -1,8 +1,8 @@
 ---
 title: "HW #4.3: First Data Analysis QMD File"
-# classoption: "STAT 184"
 author: "Junbo Zhao"
 date: "2026-04-13"
+date-modified: "2026-04-20"
 format:
   pdf:
     toc: true
